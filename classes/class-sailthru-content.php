@@ -342,6 +342,8 @@ class Sailthru_Content_Settings {
 		$data['vars'] = $this->generate_vars( $post->ID, $post );
 		$data['vars'] = apply_filters( 'sailthru_content_vars', $data['vars'], $post);
 
+		$data = apply_filters( 'sailthru_payload_data', $data );
+
 		return $data;
 	}
 
